@@ -377,3 +377,41 @@ com.crankuptheamps.client.exception.CommandException: Error from server: unknown
 2026-05-28T22:51:44.566+05:30  INFO 37128 --- [amps-basics] [SpringApplicationShutdownHook] c.s.m.a.ampsbasics.config.AmpsShutdown   : 🔌 Disconnecting AMPS client...
 2026-05-28T22:51:44.570+05:30  INFO 37128 --- [amps-basics] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
 2026-05-28T22:51:44.580+05:30  INFO 37128 --- [amps-basics] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-28T22:51:56.702+05:30  INFO 18408 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Starting AmpsBasicsApplication using Java 21.0.6 with PID 18408 (D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics\target\classes started by shanm in D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics)
+2026-05-28T22:51:56.704+05:30 DEBUG 18408 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-28T22:51:56.705+05:30  INFO 18408 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T22:51:57.204+05:30  INFO 18408 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-05-28T22:51:57.213+05:30  INFO 18408 --- [amps-basics] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T22:51:57.213+05:30  INFO 18408 --- [amps-basics] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T22:51:57.245+05:30  INFO 18408 --- [amps-basics] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 509 ms
+2026-05-28T22:51:57.282+05:30  INFO 18408 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : Amps Server URL: tcp://172.21.12.69:9007/amps/json
+2026-05-28T22:51:57.301+05:30  INFO 18408 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : AmpsClient connected and logon successfully
+2026-05-28T22:51:57.413+05:30  INFO 18408 --- [amps-basics] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-28T22:51:57.550+05:30  INFO 18408 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-05-28T22:51:57.553+05:30  INFO 18408 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Started AmpsBasicsApplication in 1.241 seconds (process running for 1.697)
+2026-05-28T22:51:57.555+05:30  INFO 18408 --- [amps-basics] [main] c.s.m.a.a.consumer.AmpsConsumer          : AMPS consumer thread started for queue: orders-queue
+2026-05-28T22:51:57.556+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : Starting AMPS queue consumer: orders-queue
+2026-05-28T22:51:57.559+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 📩 Received: {"id":"7","orderId":"ORD07","product":"watch","quantity":2,"price":9.99,"status":"NEW"}
+2026-05-28T22:51:57.593+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 🔧 Processing orderId=ORD07, product=watch
+2026-05-28T22:51:57.593+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : ✅ ACK successful orderId=ORD07 bookmark=17354182055945973978|1779988743000000007|
+2026-05-28T22:51:57.595+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 📩 Received: {"id":"7","orderId":"ORD07","product":"watch","quantity":2,"price":9.99,"status":"NEW"}
+2026-05-28T22:51:57.595+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 🔧 Processing orderId=ORD07, product=watch
+2026-05-28T22:51:57.595+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : ✅ ACK successful orderId=ORD07 bookmark=17354182055945973978|1779988743000000008|
+2026-05-28T22:51:57.597+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 📩 Received: {"id":"7","orderId":"ORD07","product":"watch","quantity":2,"price":9.99,"status":"NEW"}
+2026-05-28T22:51:57.597+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 🔧 Processing orderId=ORD07, product=watch
+2026-05-28T22:51:57.597+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : ✅ ACK successful orderId=ORD07 bookmark=17354182055945973978|1779988743000000009|
+2026-05-28T22:51:57.599+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 📩 Received: {"id":"7","orderId":"ORD07","product":"watch","quantity":2,"price":9.99,"status":"NEW"}
+2026-05-28T22:51:57.599+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 🔧 Processing orderId=ORD07, product=watch
+2026-05-28T22:51:57.599+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : ✅ ACK successful orderId=ORD07 bookmark=17354182055945973978|1779988743000000010|
+2026-05-28T22:51:57.601+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 📩 Received: {"id":"7","orderId":"ORD07","product":"watch","quantity":2,"price":9.99,"status":"NEW"}
+2026-05-28T22:51:57.601+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 🔧 Processing orderId=ORD07, product=watch
+2026-05-28T22:51:57.601+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : ✅ ACK successful orderId=ORD07 bookmark=17354182055945973978|1779988743000000011|
+2026-05-28T22:51:57.603+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 📩 Received: {"id":"7","orderId":"ORD07","product":"watch","quantity":2,"price":9.99,"status":"NEW"}
+2026-05-28T22:51:57.603+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 🔧 Processing orderId=ORD07, product=watch
+2026-05-28T22:51:57.603+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : ✅ ACK successful orderId=ORD07 bookmark=17354182055945973978|1779988743000000012|
+2026-05-28T22:51:57.605+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 📩 Received: {"id":"7","orderId":"ORD07","product":"watch","quantity":2,"price":9.99,"status":"NEW"}
+2026-05-28T22:51:57.605+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 🔧 Processing orderId=ORD07, product=watch
+2026-05-28T22:51:57.605+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : ✅ ACK successful orderId=ORD07 bookmark=17354182055945973978|1779988743000000013|
+2026-05-28T22:51:57.607+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 📩 Received: {"id":"7","orderId":"ORD07","product":"watch","quantity":2,"price":9.99,"status":"NEW"}
+2026-05-28T22:51:57.607+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 🔧 Processing orderId=ORD07, product=watch
+2026-05-28T22:51:57.607+05:30  INFO 18408 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : ✅ ACK successful orderId=ORD07 bookmark=17354182055945973978|1779988743000000014|
