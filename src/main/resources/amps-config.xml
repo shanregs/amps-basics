@@ -2,16 +2,17 @@
     <Name>my-amps-server</Name>
 
     <Logging>
-        <Console>
-            <Level>info</Level>
-        </Console>
-        <File>
-            <Type>file</Type>
+        <Target>
+            <Protocol>stdout</Protocol>
+            <!--  <Level>info</Level> -->
+            <Level>debug</Level>
+        </Target>
+        <Target>
+            <Protocol>file</Protocol>
             <FileName>/home/shan/AMPS/logs/amps.log</FileName>
             <Level>info</Level>
-            <RollBySize>10MB</RollBySize>
-            <MaxFiles>5</MaxFiles>
-        </File>
+            <RotationThreshold>10MB</RotationThreshold>
+        </Target>
     </Logging>
 
     <Admin>
