@@ -1,0 +1,71 @@
+<AMPSConfig>
+    <Name>my-amps-server</Name>
+
+    <Logging>
+        <Console>
+            <Level>info</Level>
+        </Console>
+        <File>
+            <Type>file</Type>
+            <FileName>/home/shan/AMPS/logs/amps.log</FileName>
+            <Level>info</Level>
+            <RollBySize>10MB</RollBySize>
+            <MaxFiles>5</MaxFiles>
+        </File>
+    </Logging>
+
+    <Admin>
+        <InetAddr>0.0.0.0:8085</InetAddr>
+    </Admin>
+
+    <Transports>
+        <Transport>
+            <Name>tcp-json</Name>
+            <Type>tcp</Type>
+            <InetAddr>0.0.0.0:9007</InetAddr>
+            <Protocol>amps</Protocol>
+            <MessageType>json</MessageType>
+        </Transport>
+        <Transport>
+            <Name>websocket-any</Name>
+            <Protocol>websocket</Protocol>
+            <Type>tcp</Type>
+            <InetAddr>0.0.0.0:9008</InetAddr>
+        </Transport>
+    </Transports>
+
+    <SOW>
+        <!-- SOW topic for state-of-world queries -->
+        <Topic>
+            <Name>orders</Name>
+            <MessageType>json</MessageType>
+            <Key>/id</Key>
+            <FileName>/home/shan/AMPS/sow/orders.sow</FileName>
+        </Topic>
+
+        <!-- Queue MUST live inside SOW, uses UnderlyingTopic not Topic -->
+        <Queue>
+            <Name>orders-queue</Name>
+            <MessageType>json</MessageType>
+            <Semantics>at-least-once</Semantics>
+            <UnderlyingTopic>orders</UnderlyingTopic>
+            <LeaseTimeout>30s</LeaseTimeout>
+            <MaxBacklog>100000</MaxBacklog>
+        </Queue>
+    </SOW>
+
+    <TransactionLog>
+        <JournalDirectory>/home/shan/AMPS/journal</JournalDirectory>
+        <!-- orders topic must be in TransactionLog for the queue to work -->
+        <Topic>
+            <Name>orders</Name>
+            <MessageType>json</MessageType>
+        </Topic>
+        <!-- Queue itself also needs to be journaled -->
+        <Topic>
+            <Name>orders-queue</Name>
+            <MessageType>json</MessageType>
+        </Topic>
+    </TransactionLog>
+
+</AMPSConfig>

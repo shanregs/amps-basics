@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: amps-basics
+
+logging:
+  file:
+    name: logs/amps-basics.log
+  level:
+    com.shan.mq.amps: DEBUG
+
+
+amps:
+  server:
+    url: tcp://172.21.12.69:9007/amps/json
+  client:
+    name: springboot-amps-demo
+  queue: orders-queue
+  topic: orders
+
+  # Server port for the REST API
+server:
+  port: 9090

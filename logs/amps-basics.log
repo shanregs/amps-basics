@@ -1,0 +1,242 @@
+2026-05-28T21:36:17.091+05:30  INFO 11276 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Starting AmpsBasicsApplication using Java 21.0.6 with PID 11276 (D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics\target\classes started by shanm in D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics)
+2026-05-28T21:36:17.093+05:30 DEBUG 11276 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-28T21:36:17.094+05:30  INFO 11276 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T21:36:17.625+05:30  INFO 11276 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-05-28T21:36:17.633+05:30  INFO 11276 --- [amps-basics] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T21:36:17.633+05:30  INFO 11276 --- [amps-basics] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T21:36:17.660+05:30  INFO 11276 --- [amps-basics] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 531 ms
+2026-05-28T21:36:17.696+05:30  INFO 11276 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : Amps Server URL: tcp://172.21.12.69:9007/amps/json
+2026-05-28T21:36:17.715+05:30  INFO 11276 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : AmpsClient connected and logon successfully
+2026-05-28T21:36:17.834+05:30  INFO 11276 --- [amps-basics] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-28T21:36:17.986+05:30  INFO 11276 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-05-28T21:36:17.989+05:30  INFO 11276 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Started AmpsBasicsApplication in 1.289 seconds (process running for 1.78)
+2026-05-28T21:36:17.992+05:30  INFO 11276 --- [amps-basics] [main] c.s.m.a.a.consumer.AmpsConsumer          : AMPS consumer thread started for queue: orders-queue
+2026-05-28T21:36:17.992+05:30  INFO 11276 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : Starting AMPS queue consumer: orders-queue
+2026-05-28T22:04:53.533+05:30  INFO 11276 --- [amps-basics] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-28T22:04:53.534+05:30  INFO 11276 --- [amps-basics] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-28T22:04:53.536+05:30  INFO 11276 --- [amps-basics] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-28T22:04:53.601+05:30  INFO 11276 --- [amps-basics] [http-nio-9090-exec-1] c.s.m.a.a.controller.OrderController     : Publish to Q - Order(orderId=ORD001, product=Laptop, quantity=2, price=999.99, status=NEW)
+2026-05-28T22:04:53.624+05:30  INFO 11276 --- [amps-basics] [http-nio-9090-exec-1] c.s.m.a.a.producer.AmpsProducer          : 📤 Published to AMPS [orders]: {"orderId":"ORD001","product":"Laptop","quantity":2,"price":999.99,"status":"NEW"}
+2026-05-28T22:06:08.829+05:30  INFO 11276 --- [amps-basics] [SpringApplicationShutdownHook] c.s.m.a.ampsbasics.config.AmpsShutdown   : 🔌 Disconnecting AMPS client...
+2026-05-28T22:06:08.833+05:30  INFO 11276 --- [amps-basics] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-28T22:06:08.841+05:30  INFO 11276 --- [amps-basics] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-28T22:10:12.648+05:30  INFO 40904 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Starting AmpsBasicsApplication using Java 21.0.6 with PID 40904 (D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics\target\classes started by shanm in D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics)
+2026-05-28T22:10:12.650+05:30 DEBUG 40904 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-28T22:10:12.650+05:30  INFO 40904 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T22:10:13.396+05:30  INFO 40904 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-05-28T22:10:13.409+05:30  INFO 40904 --- [amps-basics] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T22:10:13.409+05:30  INFO 40904 --- [amps-basics] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T22:10:13.446+05:30  INFO 40904 --- [amps-basics] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 746 ms
+2026-05-28T22:10:13.493+05:30  INFO 40904 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : Amps Server URL: tcp://172.21.12.69:9007/amps/json
+2026-05-28T22:10:13.515+05:30  INFO 40904 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : AmpsClient connected and logon successfully
+2026-05-28T22:10:13.680+05:30  INFO 40904 --- [amps-basics] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-28T22:10:13.877+05:30  INFO 40904 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-05-28T22:10:13.883+05:30  INFO 40904 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Started AmpsBasicsApplication in 1.763 seconds (process running for 2.36)
+2026-05-28T22:10:13.890+05:30  INFO 40904 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : Starting AMPS queue consumer: orders-queue
+2026-05-28T22:10:13.890+05:30  INFO 40904 --- [amps-basics] [main] c.s.m.a.a.consumer.AmpsConsumer          : AMPS consumer thread started for queue: orders-queue
+2026-05-28T22:10:13.896+05:30  INFO 40904 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 📩 Received: {"orderId":"ORD001","product":"Laptop","quantity":2,"price":999.99,"status":"NEW"}
+2026-05-28T22:10:13.955+05:30  INFO 40904 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 🔧 Processing orderId=ORD001, product=Laptop
+2026-05-28T22:10:13.955+05:30 ERROR 40904 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : ❌ Processing failed (no ACK sent)
+
+java.lang.NullPointerException: Cannot read field "id" because "v" is null
+	at com.crankuptheamps.client.fields.StringField.setValue(StringField.java:147) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.crankuptheamps.client.Client.executeAsyncNoLock(Client.java:1793) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.crankuptheamps.client.Client.executeAsync(Client.java:1757) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.crankuptheamps.client.Client.execute(Client.java:1678) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.shan.mq.amps.ampsbasics.consumer.AmpsConsumer.consume(AmpsConsumer.java:67) ~[classes/:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-05-28T22:10:30.843+05:30  INFO 40904 --- [amps-basics] [SpringApplicationShutdownHook] c.s.m.a.ampsbasics.config.AmpsShutdown   : 🔌 Disconnecting AMPS client...
+2026-05-28T22:10:30.846+05:30  INFO 40904 --- [amps-basics] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-28T22:10:30.856+05:30  INFO 40904 --- [amps-basics] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-28T22:11:22.998+05:30  INFO 35052 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Starting AmpsBasicsApplication using Java 21.0.6 with PID 35052 (D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics\target\classes started by shanm in D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics)
+2026-05-28T22:11:23.001+05:30 DEBUG 35052 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-28T22:11:23.001+05:30  INFO 35052 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T22:11:23.617+05:30  INFO 35052 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-05-28T22:11:23.626+05:30  INFO 35052 --- [amps-basics] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T22:11:23.627+05:30  INFO 35052 --- [amps-basics] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T22:11:23.656+05:30  INFO 35052 --- [amps-basics] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 606 ms
+2026-05-28T22:11:23.696+05:30  INFO 35052 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : Amps Server URL: tcp://172.21.12.69:9007/amps/json
+2026-05-28T22:11:23.717+05:30  INFO 35052 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : AmpsClient connected and logon successfully
+2026-05-28T22:11:23.844+05:30  INFO 35052 --- [amps-basics] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-28T22:11:24.008+05:30  INFO 35052 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-05-28T22:11:24.013+05:30  INFO 35052 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Started AmpsBasicsApplication in 1.481 seconds (process running for 2.21)
+2026-05-28T22:11:24.015+05:30  INFO 35052 --- [amps-basics] [main] c.s.m.a.a.consumer.AmpsConsumer          : AMPS consumer thread started for queue: orders-queue
+2026-05-28T22:11:24.016+05:30  INFO 35052 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : Starting AMPS queue consumer: orders-queue
+2026-05-28T22:11:24.022+05:30  INFO 35052 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 📩 Received: {"orderId":"ORD001","product":"Laptop","quantity":2,"price":999.99,"status":"NEW"}
+2026-05-28T22:11:24.063+05:30  INFO 35052 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 🔧 Processing orderId=ORD001, product=Laptop
+2026-05-28T22:11:24.063+05:30 ERROR 35052 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : ❌ Processing failed (no ACK sent)
+
+java.lang.NullPointerException: Cannot read field "id" because "v" is null
+	at com.crankuptheamps.client.fields.StringField.setValue(StringField.java:147) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.crankuptheamps.client.Client.executeAsyncNoLock(Client.java:1793) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.crankuptheamps.client.Client.executeAsync(Client.java:1757) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.crankuptheamps.client.Client.execute(Client.java:1678) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.shan.mq.amps.ampsbasics.consumer.AmpsConsumer.consume(AmpsConsumer.java:68) ~[classes/:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-05-28T22:16:52.212+05:30  INFO 35052 --- [amps-basics] [SpringApplicationShutdownHook] c.s.m.a.ampsbasics.config.AmpsShutdown   : 🔌 Disconnecting AMPS client...
+2026-05-28T22:16:52.215+05:30  INFO 35052 --- [amps-basics] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-28T22:16:52.225+05:30  INFO 35052 --- [amps-basics] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-28T22:16:57.502+05:30  INFO 40412 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Starting AmpsBasicsApplication using Java 21.0.6 with PID 40412 (D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics\target\classes started by shanm in D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics)
+2026-05-28T22:16:57.504+05:30 DEBUG 40412 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-28T22:16:57.505+05:30  INFO 40412 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T22:16:58.269+05:30  INFO 40412 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-05-28T22:16:58.281+05:30  INFO 40412 --- [amps-basics] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T22:16:58.282+05:30  INFO 40412 --- [amps-basics] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T22:16:58.321+05:30  INFO 40412 --- [amps-basics] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 761 ms
+2026-05-28T22:16:58.377+05:30  INFO 40412 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : Amps Server URL: tcp://172.21.12.69:9007/amps/json
+2026-05-28T22:16:58.412+05:30  INFO 40412 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : AmpsClient connected and logon successfully
+2026-05-28T22:16:58.579+05:30  INFO 40412 --- [amps-basics] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-28T22:16:58.790+05:30  INFO 40412 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-05-28T22:16:58.797+05:30  INFO 40412 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Started AmpsBasicsApplication in 1.85 seconds (process running for 2.58)
+2026-05-28T22:16:58.803+05:30  INFO 40412 --- [amps-basics] [main] c.s.m.a.a.consumer.AmpsConsumer          : AMPS consumer thread started for queue: orders-queue
+2026-05-28T22:16:58.803+05:30  INFO 40412 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : Starting AMPS queue consumer: orders-queue
+2026-05-28T22:16:58.809+05:30  INFO 40412 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 📩 Received: {"orderId":"ORD001","product":"Laptop","quantity":2,"price":999.99,"status":"NEW"}
+2026-05-28T22:16:58.862+05:30  INFO 40412 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 🔧 Processing orderId=ORD001, product=Laptop
+2026-05-28T22:16:58.864+05:30 ERROR 40412 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : ❌ Failed to send ACK for orderId=ORD001 bookmark=17354182055945973978|1779986051000000004|
+
+java.lang.NullPointerException: Cannot read field "id" because "v" is null
+	at com.crankuptheamps.client.fields.StringField.setValue(StringField.java:147) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.crankuptheamps.client.Client.executeAsyncNoLock(Client.java:1793) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.crankuptheamps.client.Client.executeAsync(Client.java:1757) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.crankuptheamps.client.Client.execute(Client.java:1678) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.shan.mq.amps.ampsbasics.consumer.AmpsConsumer.sendAck(AmpsConsumer.java:103) ~[classes/:na]
+	at com.shan.mq.amps.ampsbasics.consumer.AmpsConsumer.consume(AmpsConsumer.java:60) ~[classes/:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-05-28T22:19:17.129+05:30  INFO 40412 --- [amps-basics] [SpringApplicationShutdownHook] c.s.m.a.ampsbasics.config.AmpsShutdown   : 🔌 Disconnecting AMPS client...
+2026-05-28T22:19:27.306+05:30  INFO 10040 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Starting AmpsBasicsApplication using Java 21.0.6 with PID 10040 (D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics\target\classes started by shanm in D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics)
+2026-05-28T22:19:27.308+05:30 DEBUG 10040 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-28T22:19:27.309+05:30  INFO 10040 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T22:19:27.987+05:30  INFO 10040 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-05-28T22:19:27.997+05:30  INFO 10040 --- [amps-basics] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T22:19:27.997+05:30  INFO 10040 --- [amps-basics] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T22:19:28.027+05:30  INFO 10040 --- [amps-basics] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 677 ms
+2026-05-28T22:19:28.068+05:30  INFO 10040 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : Amps Server URL: tcp://172.21.12.69:9007/amps/json
+2026-05-28T22:22:00.712+05:30  INFO 13020 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Starting AmpsBasicsApplication using Java 21.0.6 with PID 13020 (D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics\target\classes started by shanm in D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics)
+2026-05-28T22:22:00.714+05:30 DEBUG 13020 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-28T22:22:00.715+05:30  INFO 13020 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T22:22:01.349+05:30  INFO 13020 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-05-28T22:22:01.359+05:30  INFO 13020 --- [amps-basics] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T22:22:01.360+05:30  INFO 13020 --- [amps-basics] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T22:22:01.393+05:30  INFO 13020 --- [amps-basics] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 643 ms
+2026-05-28T22:22:01.438+05:30  INFO 13020 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : Amps Server URL: tcp://172.21.12.69:9007/amps/json
+2026-05-28T22:22:01.462+05:30  INFO 13020 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : AmpsClient connected and logon successfully
+2026-05-28T22:22:01.626+05:30  INFO 13020 --- [amps-basics] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-28T22:22:01.812+05:30  INFO 13020 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-05-28T22:22:01.816+05:30  INFO 13020 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Started AmpsBasicsApplication in 1.576 seconds (process running for 2.169)
+2026-05-28T22:22:01.819+05:30  INFO 13020 --- [amps-basics] [main] c.s.m.a.a.consumer.AmpsConsumer          : AMPS consumer thread started for queue: orders-queue
+2026-05-28T22:22:01.819+05:30  INFO 13020 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : Starting AMPS queue consumer: orders-queue
+2026-05-28T22:22:01.824+05:30  INFO 13020 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 📩 Received: {"orderId":"ORD001","product":"Laptop","quantity":2,"price":999.99,"status":"NEW"}
+2026-05-28T22:22:01.877+05:30  INFO 13020 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 🔧 Processing orderId=ORD001, product=Laptop
+2026-05-28T22:22:01.879+05:30 ERROR 13020 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : ❌ Failed to send ACK for orderId=ORD001 bookmark=17354182055945973978|1779986051000000004|
+
+com.crankuptheamps.client.exception.CommandException: Error from server: unknown command
+	at com.crankuptheamps.client.Client.syncAckProcessing(Client.java:4963) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.crankuptheamps.client.Client.syncAckProcessing(Client.java:4774) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.crankuptheamps.client.Client.executeAsyncNoLock(Client.java:1947) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.crankuptheamps.client.Client.executeAsync(Client.java:1757) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.crankuptheamps.client.Client.execute(Client.java:1678) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.shan.mq.amps.ampsbasics.consumer.AmpsConsumer.sendAck(AmpsConsumer.java:87) ~[classes/:na]
+	at com.shan.mq.amps.ampsbasics.consumer.AmpsConsumer.consume(AmpsConsumer.java:59) ~[classes/:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-05-28T22:24:02.194+05:30  INFO 13020 --- [amps-basics] [http-nio-9090-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-28T22:24:02.195+05:30  INFO 13020 --- [amps-basics] [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-28T22:24:02.196+05:30  INFO 13020 --- [amps-basics] [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-28T22:24:02.262+05:30  INFO 13020 --- [amps-basics] [http-nio-9090-exec-3] c.s.m.a.a.controller.OrderController     : Publish to Q - Order(id=2, orderId=ORD004, product=Laptop, quantity=2, price=999.99, status=NEW)
+2026-05-28T22:24:02.274+05:30  INFO 13020 --- [amps-basics] [http-nio-9090-exec-3] c.s.m.a.a.producer.AmpsProducer          : 📤 Published to AMPS [orders]: {"id":"2","orderId":"ORD004","product":"Laptop","quantity":2,"price":999.99,"status":"NEW"}
+2026-05-28T22:24:41.490+05:30  INFO 13020 --- [amps-basics] [SpringApplicationShutdownHook] c.s.m.a.ampsbasics.config.AmpsShutdown   : 🔌 Disconnecting AMPS client...
+2026-05-28T22:24:41.492+05:30  INFO 13020 --- [amps-basics] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-28T22:24:41.500+05:30  INFO 13020 --- [amps-basics] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-28T22:24:48.435+05:30  INFO 36492 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Starting AmpsBasicsApplication using Java 21.0.6 with PID 36492 (D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics\target\classes started by shanm in D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics)
+2026-05-28T22:24:48.437+05:30 DEBUG 36492 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-28T22:24:48.437+05:30  INFO 36492 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T22:24:49.064+05:30  INFO 36492 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-05-28T22:24:49.074+05:30  INFO 36492 --- [amps-basics] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T22:24:49.074+05:30  INFO 36492 --- [amps-basics] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T22:24:49.101+05:30  INFO 36492 --- [amps-basics] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 619 ms
+2026-05-28T22:24:49.141+05:30  INFO 36492 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : Amps Server URL: tcp://172.21.12.69:9007/amps/json
+2026-05-28T22:24:49.161+05:30  INFO 36492 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : AmpsClient connected and logon successfully
+2026-05-28T22:24:49.282+05:30  INFO 36492 --- [amps-basics] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-28T22:24:49.439+05:30  INFO 36492 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-05-28T22:24:49.443+05:30  INFO 36492 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Started AmpsBasicsApplication in 1.474 seconds (process running for 2.089)
+2026-05-28T22:24:49.446+05:30  INFO 36492 --- [amps-basics] [main] c.s.m.a.a.consumer.AmpsConsumer          : AMPS consumer thread started for queue: orders-queue
+2026-05-28T22:24:49.446+05:30  INFO 36492 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : Starting AMPS queue consumer: orders-queue
+2026-05-28T22:24:49.450+05:30  INFO 36492 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 📩 Received: {"orderId":"ORD001","product":"Laptop","quantity":2,"price":999.99,"status":"NEW"}
+2026-05-28T22:24:49.496+05:30  INFO 36492 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 🔧 Processing orderId=ORD001, product=Laptop
+2026-05-28T22:24:49.497+05:30 ERROR 36492 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : ❌ Failed to send ACK for orderId=ORD001 bookmark=17354182055945973978|1779986051000000004|
+
+com.crankuptheamps.client.exception.CommandException: Error from server: unknown command
+	at com.crankuptheamps.client.Client.syncAckProcessing(Client.java:4963) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.crankuptheamps.client.Client.syncAckProcessing(Client.java:4774) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.crankuptheamps.client.Client.executeAsyncNoLock(Client.java:1947) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.crankuptheamps.client.Client.executeAsync(Client.java:1757) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.crankuptheamps.client.Client.execute(Client.java:1678) ~[amps-client-5.3.3.0.jar:5.3.3.0.118c1aff.671975]
+	at com.shan.mq.amps.ampsbasics.consumer.AmpsConsumer.sendAck(AmpsConsumer.java:87) ~[classes/:na]
+	at com.shan.mq.amps.ampsbasics.consumer.AmpsConsumer.consume(AmpsConsumer.java:59) ~[classes/:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-05-28T22:27:38.349+05:30  INFO 36492 --- [amps-basics] [SpringApplicationShutdownHook] c.s.m.a.ampsbasics.config.AmpsShutdown   : 🔌 Disconnecting AMPS client...
+2026-05-28T22:27:38.353+05:30  INFO 36492 --- [amps-basics] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-28T22:27:38.361+05:30  INFO 36492 --- [amps-basics] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-28T22:31:03.946+05:30  INFO 16200 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Starting AmpsBasicsApplication using Java 21.0.6 with PID 16200 (D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics\target\classes started by shanm in D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics)
+2026-05-28T22:31:03.948+05:30 DEBUG 16200 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-28T22:31:03.949+05:30  INFO 16200 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T22:31:04.670+05:30  INFO 16200 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-05-28T22:31:04.682+05:30  INFO 16200 --- [amps-basics] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T22:31:04.683+05:30  INFO 16200 --- [amps-basics] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T22:31:04.720+05:30  INFO 16200 --- [amps-basics] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 727 ms
+2026-05-28T22:31:04.772+05:30  INFO 16200 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : Amps Server URL: tcp://172.21.12.69:9007/amps/json
+2026-05-28T22:31:04.799+05:30  INFO 16200 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : AmpsClient connected and logon successfully
+2026-05-28T22:31:04.953+05:30  INFO 16200 --- [amps-basics] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-28T22:31:05.132+05:30  INFO 16200 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-05-28T22:31:05.135+05:30  INFO 16200 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Started AmpsBasicsApplication in 1.652 seconds (process running for 2.255)
+2026-05-28T22:31:05.138+05:30  INFO 16200 --- [amps-basics] [main] c.s.m.a.a.consumer.AmpsConsumer          : AMPS consumer thread started for queue: orders-queue
+2026-05-28T22:31:05.138+05:30  INFO 16200 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : Starting AMPS queue consumer: orders-queue
+2026-05-28T22:31:05.146+05:30  INFO 16200 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 📩 Received: {"orderId":"ORD001","product":"Laptop","quantity":2,"price":999.99,"status":"NEW"}
+2026-05-28T22:31:05.196+05:30  INFO 16200 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 🔧 Processing orderId=ORD001, product=Laptop
+2026-05-28T22:31:05.197+05:30  INFO 16200 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : ✅ ACK successful orderId=ORD001 bookmark=17354182055945973978|1779986051000000004|
+2026-05-28T22:31:05.201+05:30  INFO 16200 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 📩 Received: {"id":"2","orderId":"ORD004","product":"Laptop","quantity":2,"price":999.99,"status":"NEW"}
+2026-05-28T22:31:05.201+05:30  INFO 16200 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 🔧 Processing orderId=ORD004, product=Laptop
+2026-05-28T22:31:05.202+05:30  INFO 16200 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : ✅ ACK successful orderId=ORD004 bookmark=17354182055945973978|1779987105000000005|
+2026-05-28T22:31:42.274+05:30  INFO 16200 --- [amps-basics] [http-nio-9090-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-28T22:31:42.274+05:30  INFO 16200 --- [amps-basics] [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-28T22:31:42.275+05:30  INFO 16200 --- [amps-basics] [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-28T22:31:42.339+05:30  INFO 16200 --- [amps-basics] [http-nio-9090-exec-3] c.s.m.a.a.controller.OrderController     : Publish to Q - Order(id=3, orderId=ORD033, product=watch, quantity=2, price=9.99, status=NEW)
+2026-05-28T22:31:42.349+05:30  INFO 16200 --- [amps-basics] [http-nio-9090-exec-3] c.s.m.a.a.producer.AmpsProducer          : 📤 Published to AMPS [orders]: {"id":"3","orderId":"ORD033","product":"watch","quantity":2,"price":9.99,"status":"NEW"}
+2026-05-28T22:31:42.369+05:30  INFO 16200 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 📩 Received: {"id":"3","orderId":"ORD033","product":"watch","quantity":2,"price":9.99,"status":"NEW"}
+2026-05-28T22:31:42.369+05:30  INFO 16200 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 🔧 Processing orderId=ORD033, product=watch
+2026-05-28T22:31:42.369+05:30  INFO 16200 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : ✅ ACK successful orderId=ORD033 bookmark=17354182055945973978|1779987105000000016|
+2026-05-28T22:33:48.534+05:30  INFO 16200 --- [amps-basics] [SpringApplicationShutdownHook] c.s.m.a.ampsbasics.config.AmpsShutdown   : 🔌 Disconnecting AMPS client...
+2026-05-28T22:33:48.539+05:30  INFO 16200 --- [amps-basics] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-28T22:33:48.548+05:30  INFO 16200 --- [amps-basics] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-28T22:33:53.724+05:30  INFO 9644 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Starting AmpsBasicsApplication using Java 21.0.6 with PID 9644 (D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics\target\classes started by shanm in D:\me\work\bmo\amps-queue\amps-mini-demo\amps-basics)
+2026-05-28T22:33:53.726+05:30 DEBUG 9644 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Running with Spring Boot v4.0.6, Spring v7.0.7
+2026-05-28T22:33:53.726+05:30  INFO 9644 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-28T22:33:54.290+05:30  INFO 9644 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9090 (http)
+2026-05-28T22:33:54.299+05:30  INFO 9644 --- [amps-basics] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-28T22:33:54.300+05:30  INFO 9644 --- [amps-basics] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-28T22:33:54.329+05:30  INFO 9644 --- [amps-basics] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 569 ms
+2026-05-28T22:33:54.372+05:30  INFO 9644 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : Amps Server URL: tcp://172.21.12.69:9007/amps/json
+2026-05-28T22:33:54.396+05:30  INFO 9644 --- [amps-basics] [main] c.s.m.amps.ampsbasics.config.AmpsConfig  : AmpsClient connected and logon successfully
+2026-05-28T22:33:54.516+05:30  INFO 9644 --- [amps-basics] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-05-28T22:33:54.674+05:30  INFO 9644 --- [amps-basics] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9090 (http) with context path '/'
+2026-05-28T22:33:54.678+05:30  INFO 9644 --- [amps-basics] [main] c.s.m.a.a.AmpsBasicsApplication          : Started AmpsBasicsApplication in 1.387 seconds (process running for 1.916)
+2026-05-28T22:33:54.684+05:30  INFO 9644 --- [amps-basics] [main] c.s.m.a.a.consumer.AmpsConsumer          : AMPS consumer thread started for queue: orders-queue
+2026-05-28T22:33:54.684+05:30  INFO 9644 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : Starting AMPS queue consumer: orders-queue
+2026-05-28T22:34:06.271+05:30  INFO 9644 --- [amps-basics] [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-28T22:34:06.271+05:30  INFO 9644 --- [amps-basics] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-28T22:34:06.272+05:30  INFO 9644 --- [amps-basics] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-05-28T22:34:06.342+05:30  INFO 9644 --- [amps-basics] [http-nio-9090-exec-2] c.s.m.a.a.controller.OrderController     : Publish to Q - Order(id=4, orderId=ORD04, product=watch, quantity=2, price=9.99, status=NEW)
+2026-05-28T22:34:06.365+05:30  INFO 9644 --- [amps-basics] [http-nio-9090-exec-2] c.s.m.a.a.producer.AmpsProducer          : 📤 Published to AMPS [orders]: {"id":"4","orderId":"ORD04","product":"watch","quantity":2,"price":9.99,"status":"NEW"}
+2026-05-28T22:34:06.388+05:30  INFO 9644 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 📩 Received: {"id":"4","orderId":"ORD04","product":"watch","quantity":2,"price":9.99,"status":"NEW"}
+2026-05-28T22:34:06.405+05:30  INFO 9644 --- [amps-basics] [amps-consumer] c.s.m.a.a.consumer.AmpsConsumer          : 🔧 Processing orderId=ORD04, product=watch
+2026-05-28T22:34:10.513+05:30  INFO 9644 --- [amps-basics] [http-nio-9090-exec-3] c.s.m.a.a.controller.OrderController     : Publish to Q - Order(id=5, orderId=ORD05, product=watch, quantity=2, price=9.99, status=NEW)
+2026-05-28T22:34:10.514+05:30  INFO 9644 --- [amps-basics] [http-nio-9090-exec-3] c.s.m.a.a.producer.AmpsProducer          : 📤 Published to AMPS [orders]: {"id":"5","orderId":"ORD05","product":"watch","quantity":2,"price":9.99,"status":"NEW"}
+2026-05-28T22:34:18.839+05:30  INFO 9644 --- [amps-basics] [http-nio-9090-exec-4] c.s.m.a.a.controller.OrderController     : Publish to Q - Order(id=6, orderId=ORD06, product=watch, quantity=2, price=9.99, status=NEW)
+2026-05-28T22:34:18.840+05:30  INFO 9644 --- [amps-basics] [http-nio-9090-exec-4] c.s.m.a.a.producer.AmpsProducer          : 📤 Published to AMPS [orders]: {"id":"6","orderId":"ORD06","product":"watch","quantity":2,"price":9.99,"status":"NEW"}
+2026-05-28T22:34:24.045+05:30  INFO 9644 --- [amps-basics] [SpringApplicationShutdownHook] c.s.m.a.ampsbasics.config.AmpsShutdown   : 🔌 Disconnecting AMPS client...
+2026-05-28T22:34:24.049+05:30  INFO 9644 --- [amps-basics] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-28T22:34:24.063+05:30  INFO 9644 --- [amps-basics] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
