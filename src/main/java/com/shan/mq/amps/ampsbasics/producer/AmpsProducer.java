@@ -25,9 +25,9 @@ public class AmpsProducer {
         try {
             String json = objectMapper.writeValueAsString(order);
             ampsClient.publish(topicName, json);
-            log.info("Published to AMPS [" + topicName + "]: " + json);
+            log.info("Published to AMPS [{}]: {}", topicName, json);
         } catch (Exception e) {
-            log.error("Publish failed: " + e.getMessage());
+            log.error("Publish failed: {}", e.getMessage());
             throw new RuntimeException("Failed to publish order to AMPS", e);
         }
     }
