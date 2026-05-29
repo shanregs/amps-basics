@@ -17,12 +17,13 @@ import org.springframework.stereotype.Service;
 
 public class AmpsConsumer {
     private final HAClient ampsClient;
-
+    private final ObjectMapper objectMapper;
     @Value("${amps.queue}")
     private String queueName;
 
-    public AmpsConsumer(HAClient ampsClient) {
+    public AmpsConsumer(HAClient ampsClient, ObjectMapper objectMapper) {
         this.ampsClient = ampsClient;
+        this.objectMapper = objectMapper;
     }
 
     @EventListener(ApplicationReadyEvent.class)
@@ -34,7 +35,7 @@ public class AmpsConsumer {
     }
 
     private void consume() {
-        ObjectMapper objectMapper = new ObjectMapper();
+
         try {
             log.info("Starting AMPS queue consumer: {}", queueName);
             Command command = new Command("subscribe")
@@ -45,16 +46,17 @@ public class AmpsConsumer {
                     if (data == null || data.isBlank()) {
                         continue;
                     }
-                    log.info("📩 Received: {}", data);
+                    log.info(" Received: {}", data);
                     Order order = objectMapper.readValue(data, Order.class);
-                    processOrder(order);
                     sendAck(message,  order);
+                    processOrder(order);
+
                 } catch (Exception ex) {
-                    log.error("❌ Processing failed (no ACK sent)", ex);
+                    log.error(" Processing failed (no ACK sent)", ex);
                 }
             }
         } catch (Exception ex) {
-            log.error("❌ Consumer failed", ex);
+            log.error(" Consumer failed", ex);
         }
     }
     private void sendAck(Message message, Order order) {
@@ -64,41 +66,21 @@ public class AmpsConsumer {
                 return;
             }
 
-            // ✅ CORRECT AMPS 5.3.5 WAY
+            // CORRECT AMPS 5.3.5 WAY
             message.ack();
 
-            log.info("✅ ACK successful orderId={} bookmark={}",
+            log.info(" ACK successful orderId={} bookmark={}",
                     order.getOrderId(),
                     message.getBookmark());
 
         } catch (Exception ex) {
-            log.error("❌ ACK failed orderId={}", order.getOrderId(), ex);
+            log.error(" ACK failed orderId={}", order.getOrderId(), ex);
         }
     }
     private void processOrder(Order order) {
-        log.info("🔧 Processing orderId={}, product={}",
+        log.info("Processing orderId={}, product={}",
                 order.getOrderId(),
-                order.getProduct());
+                order.getPayload());
     }
-/*    private void sendAck(String subId, String bookmark, Order order) {
-        try {
-            if (bookmark == null || bookmark.isBlank()) {
-                log.warn("⚠️ Cannot ACK: missing bookmark for orderId={}", order.getOrderId());
-                return;
-            }
-
-          *//*  Command ack = new Command("ack")
-                    .setSubId(subId)
-                    .setBookmark(bookmark);
-
-            ampsClient.execute(ack).close();*//*
-
-            log.info("✅ ACK sent for orderId={} bookmark={}", order.getOrderId(), bookmark);
-
-        } catch (Exception ex) {
-            log.error("❌ Failed to send ACK for orderId={} bookmark={}", order.getOrderId(), bookmark, ex);
-        }
-    }*/
-
 
 }

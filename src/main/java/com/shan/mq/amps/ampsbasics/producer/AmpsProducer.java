@@ -11,23 +11,23 @@ import org.springframework.stereotype.Service;
 @Service
 public class AmpsProducer {
     private final HAClient ampsClient;
-    private ObjectMapper objectMapper = new ObjectMapper();
 
+    private final ObjectMapper objectMapper;
     @Value("${amps.topic}")
     private String topicName;
 
-    public AmpsProducer(HAClient ampsClient) {
+    public AmpsProducer(HAClient ampsClient, ObjectMapper objectMapper) {
         this.ampsClient = ampsClient;
-
+        this.objectMapper = objectMapper;
     }
 
     public void publish(Order order) {
         try {
             String json = objectMapper.writeValueAsString(order);
             ampsClient.publish(topicName, json);
-            log.info("📤 Published to AMPS [" + topicName + "]: " + json);
+            log.info("Published to AMPS [" + topicName + "]: " + json);
         } catch (Exception e) {
-            log.error("❌ Publish failed: " + e.getMessage());
+            log.error("Publish failed: " + e.getMessage());
             throw new RuntimeException("Failed to publish order to AMPS", e);
         }
     }
